@@ -37,6 +37,9 @@ private extension OnlineFeedEndToEndTests {
         let client = URLSessionHTTPClient()
         let loader = RemoteFeedLoader(url: testServerURL, client: client)
         
+        checkMemoryLeak(client)
+        checkMemoryLeak(loader)
+        
         let exp = expectation(description: "wait to load complete")
         
         var recievedResult: LoadFeedResult<RemoteFeedLoader.Error>?
