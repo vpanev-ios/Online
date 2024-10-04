@@ -27,6 +27,13 @@
         "identifier" : "8B7EB7612CAD5455005725E0",
         "name" : "OnlineFeedTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:OnlineFeed.xcodeproj",
+        "identifier" : "8BDCC6F82CB03564009D317E",
+        "name" : "OnlineFeedEndToEndTests"
+      }
     }
   ],
   "version" : 1
