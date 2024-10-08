@@ -34,7 +34,7 @@ final class OnlineFeedEndToEndTests: XCTestCase {
 private extension OnlineFeedEndToEndTests {
     func makeResult() -> LoadFeedResult<RemoteFeedLoader.Error>? {
         let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
-        let client = URLSessionHTTPClient()
+        let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
         let loader = RemoteFeedLoader(url: testServerURL, client: client)
         
         checkMemoryLeak(client)
